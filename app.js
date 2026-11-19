@@ -1,5 +1,5 @@
 (() => {
-  const API = (window.APP_CONFIG?.API_BASE_URL || "http://127.0.0.1:8000").replace(/\/$/, "");
+  const API = (window.APP_CONFIG?.API_BASE_URL || "https://backend-b2dfba7d.fastapicloud.dev").replace(/\/$/, "");
   const $ = (s, root=document) => root.querySelector(s);
   const $$ = (s, root=document) => [...root.querySelectorAll(s)];
   const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
