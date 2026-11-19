@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>پنل مدیریت | نوبتینو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
+<body class="admin-body">
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">ن</span><span>نوبتینو<small>مدیریت سامانه</small></span></a><nav><a href="index.html">مشاهده سایت ↗</a><a class="active" href="admin.html">داشبورد</a></nav></header>
+<main class="admin-main">
+  <div class="admin-welcome"><div><span class="eyebrow">مدیریت کلینیک</span><h1>داشبورد مدیریت</h1><p>اطلاعات پزشکان و برنامه نوبت‌دهی را مدیریت کن.</p></div><button class="primary-btn" id="open-create">＋ افزودن پزشک</button></div>
+  <div class="stat-grid"><article class="stat-card"><span>تعداد پزشکان</span><b id="stat-doctors">—</b><small>پزشک ثبت‌شده</small></article><article class="stat-card"><span>کل زمان‌های برنامه</span><b id="stat-slots">—</b><small>بر اساس برنامه پزشکان</small></article><article class="stat-card"><span>نوبت‌های رزروشده</span><b id="stat-reserved">—</b><small>در تمام برنامه‌ها</small></article></div>
+  <section class="admin-panel"><div class="panel-heading"><div><h2>مدیریت پزشکان</h2><p>فهرست پزشکان ثبت‌شده در سامانه</p></div><button class="outline-btn" id="refresh">↻ بروزرسانی</button></div><div id="admin-doctors" class="admin-doctors"><div class="loading">در حال بارگذاری...</div></div></section>
+  <section class="admin-panel ai-panel"><div><span class="eyebrow">دستیار هوشمند</span><h2>پرسش از دستیار AI</h2><p>سؤالت را ارسال کن تا پاسخ سرویس هوش مصنوعی نمایش داده شود.</p></div><form id="ai-form"><textarea id="ai-question" required rows="2" placeholder="سؤالت را بنویس..."></textarea><button class="primary-btn" type="submit">ارسال پرسش ←</button></form><div id="ai-answer" class="ai-answer hidden"></div></section>
+</main>
+<footer><a class="brand" href="index.html"><span class="brand-mark">ن</span><span>نوبتینو</span></a><span>پنل مدیریت</span><a href="index.html">بازگشت به سایت</a></footer>
+<div id="toast" class="toast" role="status"></div>
+<div id="doctor-modal" class="modal hidden"><div class="modal-backdrop" data-close></div><section class="modal-panel wide"><button class="close-btn" data-close>×</button><span class="eyebrow" id="form-eyebrow">مدیریت پزشک</span><h2 id="doctor-modal-title">افزودن پزشک جدید</h2>
+<form id="doctor-form" class="doctor-form"><input type="hidden" id="edit-id"><div class="form-grid"><label>نام پزشک<input id="doctor-name" required maxlength="100"></label><label>شماره تماس<input id="doctor-phone" maxlength="11" inputmode="tel" required></label><label class="span-2">آدرس مطب<input id="doctor-address" required maxlength="800"></label><label class="span-2">توضیحات<textarea id="doctor-description" rows="3" maxlength="800"></textarea></label></div>
+<div class="schedule-head"><div><h3>برنامه زمانی</h3><small>زمان‌ها را با فرمت دلخواه مانند 09:00 وارد کن.</small></div><button type="button" class="outline-btn" id="add-slot">＋ افزودن زمان</button></div><div id="schedule-editor" class="schedule-editor"></div><button class="primary-btn full" type="submit">ذخیره اطلاعات پزشک</button></form></section></div>
+<script src="config.js"></script><script src="app.js"></script></body></html>

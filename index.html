@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>نوبتینو | رزرو نوبت پزشک</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">ن</span><span>نوبتینو<small>سامانه نوبت‌دهی آنلاین</small></span></a>
+  <nav><a class="active" href="index.html">پزشکان</a><a href="#how">راهنما</a><a class="admin-link" href="admin.html">ورود مدیر <span>↗</span></a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><span class="eyebrow"><i></i> رزرو آسان، بدون انتظار</span><h1>مراقبت بهتر،<br><em>با یک نوبت ساده.</em></h1>
+      <p>پزشک موردنظرت را پیدا کن، زمان آزاد را انتخاب کن و نوبتت را آنلاین ثبت کن.</p>
+      <a class="primary-btn" href="#doctors">مشاهده پزشکان <span>←</span></a>
+      <div class="hero-stats"><div><b id="doctor-count">—</b><small>پزشک فعال</small></div><div><b>۲۴/۷</b><small>ثبت درخواست</small></div><div><b>سریع</b><small>رزرو آنلاین</small></div></div>
+    </div>
+    <div class="hero-art"><div class="art-glow"></div><div class="medical-card"><div class="medical-top"><span class="pulse">✚</span><span>سلامتی در اولویت</span><span class="live-dot"></span></div><div class="cross-art">✚</div><div class="art-caption"><b>نوبت بعدی تو</b><small>فقط چند کلیک فاصله دارد</small></div><div class="floating-tag">✓ رزرو آسان و مطمئن</div></div></div>
+  </section>
+  <section class="section" id="doctors">
+    <div class="section-heading"><div><span class="eyebrow">انتخاب آگاهانه</span><h2>پزشکان ما</h2><p>اطلاعات پزشکان و زمان‌های قابل رزرو را بررسی کن.</p></div><label class="search-box"><span>⌕</span><input id="search" placeholder="جست‌وجوی نام پزشک..."></label></div>
+    <div id="doctor-grid" class="doctor-grid"><div class="loading">در حال دریافت فهرست پزشکان...</div></div>
+    <div id="empty-state" class="empty-state hidden">پزشکی با این مشخصات پیدا نشد.</div>
+  </section>
+  <section class="how-section" id="how"><span class="eyebrow">ساده و شفاف</span><h2>چطور نوبت بگیرم؟</h2><div class="steps"><article><b>۰۱</b><h3>پزشک را انتخاب کن</h3><p>مشخصات و آدرس پزشکان را بررسی کن.</p></article><article><b>۰۲</b><h3>زمان آزاد را ببین</h3><p>از بین زمان‌های آزاد، گزینه مناسب را انتخاب کن.</p></article><article><b>۰۳</b><h3>نوبت را ثبت کن</h3><p>نامت را وارد کن و رزرو را نهایی کن.</p></article></div></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">ن</span><span>نوبتینو</span></a><span>© تمامی حقوق محفوظ است.</span><a href="admin.html">پنل مدیریت</a></footer>
+<div id="toast" class="toast" role="status"></div>
+<div id="booking-modal" class="modal hidden"><div class="modal-backdrop" data-close></div><section class="modal-panel"><button class="close-btn" data-close>×</button><span class="eyebrow">ثبت درخواست</span><h2 id="modal-title">رزرو نوبت</h2><p id="modal-subtitle" class="muted"></p><form id="booking-form"><input type="hidden" id="booking-doctor-id"><input type="hidden" id="booking-start"><label>نام و نام خانوادگی<input id="patient-name" maxlength="100" required placeholder="مثلاً مهدی محسنی"></label><div class="selected-slot" id="selected-slot"></div><button class="primary-btn full" type="submit">تأیید و ثبت نوبت <span>←</span></button></form></section></div>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
